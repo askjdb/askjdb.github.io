@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>aa</title>
+    <url>/2023/03/08/aa/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.初始化项目</span><br><span class="line">npm init -y  // 初始化项目 -y为yes 自行配置项目信息可不写</span><br><span class="line"></span><br><span class="line">2.安装node 框架express</span><br><span class="line">npm i express --save</span><br><span class="line"></span><br><span class="line">3.安装一些会使用到的插件</span><br><span class="line">npm i jsonwebtoken --save</span><br><span class="line">npm i express-jwt</span><br><span class="line">npm i body-parser --save // 解析post请求发送过来的数据</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>学习 生活</tag>
+      </tags>
+  </entry>
+</search>
