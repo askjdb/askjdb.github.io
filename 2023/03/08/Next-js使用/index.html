@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Next-js," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Next.js简单使用教程简介 Next.js 是一个轻量级的 React 服务端渲染应用框架。  优点：  零配置 自动编译并打包。从一开始就为生产环境而优化。  混合模式： SSG 和 SSR 在一个项目中同时支持构建时预渲染页面（SSG）和请求时渲染页面（SSR）  增量静态生成 在构建之后以增量的方式添加并更新静态预渲染的页面。  支持 TypeScript 自动配置并编译 TypeScr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Next.js使用">
+<meta property="og:url" content="http://example.com/2023/03/08/Next-js%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="秘密基地">
+<meta property="og:description" content="Next.js简单使用教程简介 Next.js 是一个轻量级的 React 服务端渲染应用框架。  优点：  零配置 自动编译并打包。从一开始就为生产环境而优化。  混合模式： SSG 和 SSR 在一个项目中同时支持构建时预渲染页面（SSG）和请求时渲染页面（SSR）  增量静态生成 在构建之后以增量的方式添加并更新静态预渲染的页面。  支持 TypeScript 自动配置并编译 TypeScr">
+<meta property="og:locale">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6e6610d913f48a78feec3599ccaff77~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d3e3022b4cf4c37aac0a5dc0af33531~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8211450c77f3420396ed22215009f009~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+<meta property="article:published_time" content="2023-03-08T11:15:22.000Z">
+<meta property="article:modified_time" content="2023-03-08T11:18:46.593Z">
+<meta property="article:author" content="风起苍岚">
+<meta property="article:tag" content="Next-js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6e6610d913f48a78feec3599ccaff77~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2023/03/08/Next-js使用/"/>
+
+
+
+
+
+  <title>Next.js使用 | 秘密基地</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a target="_blank" rel="noopener" href="https://github.com/askjdb" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">秘密基地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/08/Next-js%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/%E5%A4%A7%E8%80%81%E5%B8%883.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秘密基地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Next.js使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-03-08T19:15:22+08:00">
+                2023-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2023/03/08/Next-js%E4%BD%BF%E7%94%A8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2023/03/08/Next-js%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本页总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  17
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Next-js简单使用教程"><a href="#Next-js简单使用教程" class="headerlink" title="Next.js简单使用教程"></a>Next.js简单使用教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>Next.js 是一个轻量级的 React 服务端渲染应用框架。</p>
+</blockquote>
+<p><strong>优点：</strong></p>
+<ul>
+<li><p>零配置</p>
+<p>自动编译并打包。从一开始就为生产环境而优化。</p>
+</li>
+<li><p>混合模式： SSG 和 SSR</p>
+<p>在一个项目中同时支持构建时预渲染页面（SSG）和请求时渲染页面（SSR）</p>
+</li>
+<li><p>增量静态生成</p>
+<p>在构建之后以增量的方式添加并更新静态预渲染的页面。</p>
+</li>
+<li><p>支持 TypeScript</p>
+<p>自动配置并编译 TypeScript。</p>
+</li>
+<li><p>快速刷新</p>
+<p>快速、可靠的实时编辑体验，已在 Facebook 级别的应用上规模上得到验证。</p>
+</li>
+<li><p>基于文件系统的路由</p>
+<p>每个 <code>pages</code> 目录下的组件都是一条路由。</p>
+</li>
+<li><p>API 路由</p>
+<p>创建 API 端点（可选）以提供后端功能。</p>
+</li>
+<li><p>内置支持CSS</p>
+<p>使用 CSS 模块创建组件级的样式。内置对 Sass 的支持。</p>
+</li>
+<li><p>代码拆分和打包</p>
+<p>采用由 Google Chrome 小组创建的、并经过优化的打包和拆分算法。</p>
+</li>
+</ul>
+<h2 id="创建Next-js项目"><a href="#创建Next-js项目" class="headerlink" title="创建Next.js项目"></a>创建Next.js项目</h2><h3 id="手动创建Next-js项目"><a href="#手动创建Next-js项目" class="headerlink" title="手动创建Next.js项目"></a>手动创建Next.js项目</h3><blockquote>
+<p>mkdir nextDemo &#x2F;&#x2F;创建项目</p>
+<p>npm init &#x2F;&#x2F;初始化项目</p>
+<p>npm i react react-dom next –save &#x2F;&#x2F;添加依赖</p>
+</blockquote>
+<p>在<code>package.json</code>中添加快捷键命令</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;dev&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;next&quot;</span> <span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;build&quot;</span> <span class="punctuation">:</span> <span class="string">&quot; next build&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;next start&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p>创建<code>pages</code>文件夹和文件</p>
+<p>在项目根目录创建<code>pages</code>文件夹并在<code>pages</code>文件夹中创建<code>index.js</code>文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Index</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello Next.js<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Index</span></span><br></pre></td></tr></table></figure>
+
+<p>运行项目</p>
+<blockquote>
+<p>npm run dev</p>
+</blockquote>
+<h3 id="creact-next-app快速创建项目"><a href="#creact-next-app快速创建项目" class="headerlink" title="creact-next-app快速创建项目"></a><code>creact-next-app</code>快速创建项目</h3><p><code>create-next-app</code>可以快速的创建<code>Next.js</code>项目，它就是一个脚手架。</p>
+<blockquote>
+<p>npm install -g create-next-app		&#x2F;&#x2F;全局安装脚手架</p>
+<p>create-next-app nextDemo		&#x2F;&#x2F;基于脚手架创建项目</p>
+<p>cd nextDemo</p>
+<p>npm run dev		&#x2F;&#x2F;运行项目</p>
+</blockquote>
+<p><strong>目录结构介绍：</strong></p>
+<ul>
+<li>components文件夹: 这里是专门放置自己写的组件的，这里的组件不包括页面，指公用的或者有专门用途的组件。</li>
+<li>node_modules文件夹：Next项目的所有依赖包都在这里，一般我们不会修改和编辑这里的内容。</li>
+<li>pages文件夹：这里是放置页面的，这里边的内容会自动生成路由，并在服务器端渲染，渲染好后进行数据同步。</li>
+<li>static文件夹： 这个是静态文件夹，比如项目需要的图片、图标和静态资源都可以放到这里。</li>
+<li>.gitignore文件： 这个主要是控制git提交和上传文件的，简称就是忽略提交。</li>
+<li>package.json文件：定义了项目所需要的文件和项目的配置信息（名称、版本和许可证），最主要的是使用<code>npm install</code> 就可以下载项目所需要的所有包。</li>
+</ul>
+<h2 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h2><p>在 Next.js 中，一个 <strong>page（页面）</strong> 就是一个从 <code>.js</code>、<code>jsx</code>、<code>.ts</code> 或 <code>.tsx</code> 文件导出（export）的 <a href="https://link.juejin.cn/?target=https://reactjs.org/docs/components-and-props.html">React 组件</a> ，这些文件存放在 <code>pages</code> 目录下。每个 page（页面）都使用其文件名作为路由（route）。</p>
+<p>如果你创建了一个命名为 <code>pages/about.js</code> 的文件并导出（export）一个如下所示的 React 组件，则可以通过 <code>/about</code> 路径进行访问。</p>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>页面跳转一般有两种形式，第一种是利用标签<code>&lt;Link&gt;</code>,第二种是用js编程的方式进行跳转，也就是利用<code>Router</code>组件</p>
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">&#x27;next/link&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Home</span> = (<span class="params"></span>) =&gt; (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>我是首页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/pageA&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span>去A页面<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">Link</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/pageB&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span>去B页面<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">Link</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Home</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：用<code>&lt;Link&gt;</code>标签进行跳转是非常容易的，但是又一个小坑需要你注意一下，就是他不支持兄弟标签并列的情况。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//错误写法</span></span><br><span class="line"> &lt;div&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/pageA&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>去A页面<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>前端博客<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//正确写法</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/pageA&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>去A页面<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>前端博客<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Router</span> <span class="keyword">from</span> <span class="string">&#x27;next/router&#x27;</span></span><br><span class="line"></span><br><span class="line">&lt;button onClick=&#123;<span class="function">()=&gt;</span>&#123;<span class="title class_">Router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/pageA&#x27;</span>)&#125;&#125;&gt;去A页面&lt;/button&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRouter &#125; <span class="keyword">from</span> <span class="string">&#x27;next/router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ActiveLink</span>(<span class="params">&#123; children, href &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> router = <span class="title function_">useRouter</span>()</span><br><span class="line">  <span class="keyword">const</span> style = &#123;</span><br><span class="line">    <span class="attr">marginRight</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="attr">color</span>: router.<span class="property">asPath</span> === href ? <span class="string">&#x27;red&#x27;</span> : <span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>()</span><br><span class="line">    router.<span class="title function_">push</span>(href)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&#123;href&#125;</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span> <span class="attr">style</span>=<span class="string">&#123;style&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;children&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">ActiveLink</span></span><br><span class="line"></span><br><span class="line">useRouter is a <span class="title class_">React</span> <span class="title class_">Hook</span>, meaning it cannot be used <span class="keyword">with</span> classes. <span class="title class_">You</span> can either use withRouter or wrap your <span class="keyword">class</span> <span class="title class_">in</span> a <span class="keyword">function</span> component.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="参数传递与接收"><a href="#参数传递与接收" class="headerlink" title="参数传递与接收"></a>参数传递与接收</h3><p>在<code>Next.js</code>中只能通过通过query（<code>?id=1</code>）来传递参数，而不能通过(<code>path:id</code>)的形式传递参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">&#x27;next/link&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//传递</span></span><br><span class="line">&lt;<span class="title class_">Link</span> href=<span class="string">&quot;/blogDetail?bid=23&quot;</span>&gt;<span class="language-xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span>&#123;blog.title&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/<span class="title class_">Link</span>&gt;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">//blog.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; withRouter&#125; <span class="keyword">from</span> <span class="string">&#x27;next/router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">&#x27;next/link&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">BlogDetail</span> = (<span class="params">&#123;router&#125;</span>)=&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span>blog id: &#123;router.query.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span>返回首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//withRouter是Next.js框架的高级组件，用来处理路由用的</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">withRouter</span>(<span class="title class_">BlogDetail</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/************************************************************************************/</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Router</span> <span class="keyword">from</span> <span class="string">&#x27;next/router&#x27;</span></span><br><span class="line"></span><br><span class="line">&lt;button onClick=&#123;gotoBlogDetail&#125; &gt;博客详情&lt;/button&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">gotoBlogDetail</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/blogDetail?bid=23&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//object 形式</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">gotoBlogDetail</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title class_">Router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">        <span class="attr">pathname</span>:<span class="string">&quot;/blogDetail&quot;</span>,</span><br><span class="line">        <span class="attr">query</span>:&#123;</span><br><span class="line">            <span class="attr">bid</span>:<span class="number">23</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;<span class="title class_">Link</span> href=&#123;&#123;<span class="attr">pathname</span>:<span class="string">&#x27;/blogDetail&#x27;</span>,<span class="attr">query</span>:&#123;<span class="attr">bid</span>:<span class="number">23</span>&#125;&#125;&gt;<span class="language-xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span>博客详情<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>&lt;/<span class="title class_">Link</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pages/post/<span class="selector-attr">[pid]</span><span class="selector-class">.js</span></span><br><span class="line">route : /post/abc  --&gt;  query : &#123; &quot;pid&quot;: <span class="string">&quot;abc&quot;</span> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pages/post/<span class="selector-attr">[pid]</span>/<span class="selector-attr">[comment]</span><span class="selector-class">.js</span></span><br><span class="line">route : /post/abc/a-comment  --&gt;  query : &#123; &quot;pid&quot;: <span class="string">&quot;abc&quot;</span>, <span class="string">&quot;comment&quot;</span>: <span class="string">&quot;a-comment&quot;</span> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="钩子事件"><a href="#钩子事件" class="headerlink" title="钩子事件"></a>钩子事件</h3><p>利用钩子事件是可以作很多事情的，比如转换时的加载动画，关掉页面的一些资源计数器…..</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//路由发生变化时</span></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;routeChangeStart&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;1.routeChangeStart-&gt;路由开始变化,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//路由结束变化时</span></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;routeChangeComplete&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;routeChangeComplete-&gt;路由结束变化,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//浏览器 history触发前</span></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;beforeHistoryChange&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;3,beforeHistoryChange-&gt;在改变浏览器 history之前触发,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//路由跳转发生错误时</span></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;routeChangeError&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;4,routeChangeError-&gt;跳转发生错误,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************hash路由***********************************/</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;hashChangeStart&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;5,hashChangeStart-&gt;hash跳转开始时执行,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="title class_">Router</span>.<span class="property">events</span>.<span class="title function_">on</span>(<span class="string">&#x27;hashChangeComplete&#x27;</span>,<span class="function">(<span class="params">...args</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;6,hashChangeComplete-&gt;hash跳转完成时,参数为:&#x27;</span>,...args)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//注意钩子事件要放到useEff()里面，使用完毕卸载，否则每次更新页面都会触发事件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><h3 id="getStaticProps"><a href="#getStaticProps" class="headerlink" title="getStaticProps"></a><code>getStaticProps</code></h3><p><strong>构建时请求数据</strong></p>
+<p>在build阶段将页面构建成静态的html文件，这样线上直接访问HTML文件，性能极高。</p>
+<ul>
+<li>使用<code>getStaticProps</code>方法在build阶段返回页面所需的数据。</li>
+<li>如果是动态路由的页面，使用<code>getStaticPaths</code>方法来返回所有的路由参数，以及是否需要回落机制。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// posts will be populated at build time by getStaticProps()</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Blog</span>(<span class="params">&#123; posts &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;posts.map((post) =&gt; (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;post.title&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      ))&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This function gets called at build time on server-side.</span></span><br><span class="line"><span class="comment">// It won&#x27;t be called on client-side, so you can even do</span></span><br><span class="line"><span class="comment">// direct database queries. See the &quot;Technical details&quot; section.</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getStaticProps</span>(<span class="params">context</span>) &#123;</span><br><span class="line">  <span class="comment">// Call an external API endpoint to get posts.</span></span><br><span class="line">  <span class="comment">// You can use any data fetching library</span></span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;https://.../posts&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> posts = <span class="keyword">await</span> res.<span class="title function_">json</span>()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// By returning &#123; props: &#123; posts &#125; &#125;, the Blog component</span></span><br><span class="line">  <span class="comment">// will receive `posts` as a prop at build time</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      posts,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Blog</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="getServerSideProps"><a href="#getServerSideProps" class="headerlink" title="getServerSideProps"></a><code>getServerSideProps</code></h3><p><strong>每次访问时请求数据</strong></p>
+<p>页面中<code>export</code>一个<code>async</code>的<code>getServerSideProps</code>方法，next就会在每次请求时候在服务端调用这个方法。</p>
+<ul>
+<li>方法只会在服务端运行，每次请求都运行一边<code>getServerSideProps</code>方法</li>
+<li>如果页面通过浏览器端<code>Link</code>组件导航而来，Next会向服务端发一个请求，然后在服务端运行<code>getServerSideProps</code>方法，然后返回JSON到浏览器。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Page</span>(<span class="params">&#123; data &#125;</span>) &#123;</span><br><span class="line">  <span class="comment">// Render data...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This gets called on every request</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getServerSideProps</span>(<span class="params">context</span>) &#123;</span><br><span class="line">  <span class="comment">// Fetch data from external API</span></span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">`https://.../data`</span>)</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> res.<span class="title function_">json</span>()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Pass data to the page via props</span></span><br><span class="line">  <span class="keyword">return</span> &#123; <span class="attr">props</span>: &#123; data &#125; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Page</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="getInitialProps"><a href="#getInitialProps" class="headerlink" title="getInitialProps"></a>getInitialProps</h3><p><code>getInitialProps</code> 是挂在 <code>React</code> 组件上的静态方法</p>
+<p>我们可以在这个方法内部完成页面数据获取的工作</p>
+<p>使用示例如下图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f6e6610d913f48a78feec3599ccaff77~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" alt="carbon (18).png"></p>
+<p>那我们难道不可以在 <code>React</code> 组件内部 <code>ComponentDidMount</code> 去获取页面数据吗？ </p>
+<p>当然可以，不过既然 <code>Nextjs</code> 提供了这个为数据获取提供的方法，那自然有它的道理 </p>
+<p>毕竟 <code>Nextjs</code> 身为 同构框架，事情并没有表面上看到的这么简单 </p>
+<p>我们如果需要 <code>Nextjs</code> 的 <code>SSR</code> 大部分功能的话，还是尽可能地按照 <code>Nextjs</code> 提供的数据获取规范走</p>
+<blockquote>
+<p><code>getInitialProps</code> 只会在组件身为页面 <code>pages</code> 目录下的一员时生效</p>
+</blockquote>
+<p>值得注意的是，<code>getInitialProps</code> 会在服务端渲染时执行，也会在客户端渲染时执行这也是事情不简单的原因所在</p>
+<p>当页面通过页面刷新等直接形式访问时，会触发 <code>Nextjs</code> 使用服务端渲染的方式返回页面数据</p>
+<p>此时 <code>getInitialProps</code> 会在服务端执行，浏览器端不会执行</p>
+<p>如图所示，通过服务端渲染访问 <code>Home</code> 时，在终端会输出 <code>console.log</code>：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d3e3022b4cf4c37aac0a5dc0af33531~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" alt="image.png"></p>
+<p>当页面通过浏览器端路由跳转的形式访问时（如浏览器前进后退），该页面渲染不会触发 <code>Nextjs</code> 服务端渲染</p>
+<p>此时页面渲染前仍会触发 <code>getInitialProps</code> 方法，只不过执行时在浏览器端，如图所示：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8211450c77f3420396ed22215009f009~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" alt="image.png"></p>
+<p>所以实际上 <code>getInitialProps</code> 方法会根据当前页面渲染时的端侧不同，自主地选择在 Node 端还是 Client 端执行</p>
+<p>getInitialProps 一些需要了解的点：</p>
+<ul>
+<li>数据获取通常为异步操作，<code>getInitialProps</code> 方法使用 <code>async</code> 异步执行即可</li>
+<li><code>getInitialProps</code> 异步获取数据，页面会等到页面数据都获取加载完成后才进行渲染</li>
+<li>因为是双端执行，所以需要尤为小心地使用仅一端存在的 <code>API</code>，如：<code>document</code>、<code>window</code> 等</li>
+<li>因为是双端执行，数据获取需要某些时候考虑如何取用户状态如服务端侧可以使用 <code>ctx.req/ctx.res</code></li>
+<li>因为是双端执行，在 <code>getInitialProps</code> 方法里进行页面跳转也需要根据端侧不同使用跳转方式也不同</li>
+</ul>
+<p>不清楚是不是自己还没 <code>Get</code> 到它的 <code>G</code> 点的缘故，<code>getInitialProps</code> 就目前自己使用的情况来看，它并不讨我喜欢 </p>
+<p>在想是不是还是使用旧有的 <code>getStaticProps</code> 和 <code>getServerProps</code>，最起码很清晰所属哪一端，能够使用什么 <code>API</code></p>
+<h2 id="CSS支持（现在的Next-js支持直接import引入css）"><a href="#CSS支持（现在的Next-js支持直接import引入css）" class="headerlink" title="CSS支持（现在的Next.js支持直接import引入css）"></a>CSS支持（现在的Next.js支持直接import引入css）</h2><h3 id="添加全局css"><a href="#添加全局css" class="headerlink" title="添加全局css"></a>添加全局css</h3><p>要将样式表添加到您的应用程序中，请在 <code>pages/_app.js</code> 文件中导入（import）CSS 文件。</p>
+<p>例如，假设有以下样式表 <code>styles.css</code>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;SF Pro Text&#x27;</span>, <span class="string">&#x27;SF Pro Icons&#x27;</span>, <span class="string">&#x27;Helvetica Neue&#x27;</span>, <span class="string">&#x27;Helvetica&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Arial&#x27;</span>, sans-serif;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">20px</span> <span class="number">60px</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">680px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先创建一个 <a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/advanced-features/custom-app"><code>pages/_app.js</code> 文件</a> （如果不存在的话）。 然后 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><code>import</code></a> 该 <code>styles.css</code> 文件。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../styles.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 新创建的 `pages/_app.js` 文件中必须有此默认的导出（export）函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">MyApp</span>(<span class="params">&#123; Component, pageProps &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...pageProps</span>&#125; /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这些样式 (<code>styles.css</code>) 将应用于你的应用程序中的所有页面和组件。 由于样式表的全局特性，并且为了避免冲突，你应该 <strong>只在 <a target="_blank" rel="noopener" href="https://www.nextjs.cn/docs/advanced-features/custom-app"><code>pages/_app.js</code></a> 文件中导入（import）样式表</strong>。</p>
+<p>在开发中，以这种方式表示样式可让你在编辑样式时对其进行热重载，这意味着你可以保持应用程序的状态。</p>
+<p>在生产环境中，所有 CSS 文件将自动合并为一个经过精简的 <code>.css</code> 文件。</p>
+<p>从 Next.js <strong>9.5.4</strong> 版本开始，你可以在应用程序中的任何位置从 <code>node_modules</code> 目录导入（import） CSS 文件了。</p>
+<p>对于全局样式表（例如 <code>bootstrap</code> 或 <code>nprogress</code>），你应该在 <code>pages/_app.js</code> 文件中对齐进行导入（import）。 例如：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pages/_app.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">MyApp</span>(<span class="params">&#123; Component, pageProps &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...pageProps</span>&#125; /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于导入第三方组件所需的 CSS，可以在组件中进行。例如：</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// components/ExampleDialog.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Dialog</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@reach/dialog&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VisuallyHidden</span> <span class="keyword">from</span> <span class="string">&#x27;@reach/visually-hidden&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@reach/dialog/styles.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ExampleDialog</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [showDialog, setShowDialog] = <span class="title function_">useState</span>(<span class="literal">false</span>)</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">open</span> = (<span class="params"></span>) =&gt; <span class="title function_">setShowDialog</span>(<span class="literal">true</span>)</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">close</span> = (<span class="params"></span>) =&gt; <span class="title function_">setShowDialog</span>(<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;open&#125;</span>&gt;</span>Open Dialog<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Dialog</span> <span class="attr">isOpen</span>=<span class="string">&#123;showDialog&#125;</span> <span class="attr">onDismiss</span>=<span class="string">&#123;close&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">className</span>=<span class="string">&quot;close-button&quot;</span> <span class="attr">onClick</span>=<span class="string">&#123;close&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">VisuallyHidden</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">VisuallyHidden</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">span</span> <span class="attr">aria-hidden</span>&gt;</span>×<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello there. I am a dialog<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Dialog</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加组件级CSS"><a href="#添加组件级CSS" class="headerlink" title="添加组件级CSS"></a>添加组件级CSS</h3><ul>
+<li><p><code>[name].module.css</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//login<span class="selector-class">.module</span><span class="selector-class">.css</span></span><br><span class="line"><span class="selector-class">.loginDiv</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//修改第三方样式</span><br><span class="line"><span class="selector-class">.loginDiv</span> :<span class="built_in">global</span>(.active)&#123;</span><br><span class="line">    <span class="attribute">color</span>:<span class="built_in">rgb</span>(<span class="number">30</span>, <span class="number">144</span>, <span class="number">255</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">&#x27;./login.module.css&#x27;</span></span><br><span class="line"></span><br><span class="line">&lt;div className=&#123;styles.<span class="property">loginDiv</span>&#125;/&gt;</span><br><span class="line"></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>Next.js 允许你导入（import）具有 <code>.scss</code> 和 <code>.sass</code> 扩展名的 Sass 文件。 你可以通过 CSS 模块以及 <code>.module.scss</code> 或 <code>.module.sass</code> 扩展名来使用组件及的 Sass</p>
+<blockquote>
+<p>npm i sass –save</p>
+</blockquote>
+<p>如果要配置 Sass 编译器，可以使用 <code>next.config.js</code> 文件中的 <code>sassOptions</code> 参数进行配置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">sassOptions</span>: &#123;</span><br><span class="line">    <span class="attr">includePaths</span>: [path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;styles&#x27;</span>)],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>CSS-in-JS</code></p>
+<p>可以使用任何现有的 CSS-in-JS 解决方案。 最简单的一种是内联样式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&#123;&#123; <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span> &#125;&#125;&gt;hi there&lt;/p&gt;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>styled-jsx</code> 的组件就像这样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      Hello world</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>scoped!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">style</span> <span class="attr">jsx</span>&gt;</span><span class="language-css">&#123;`</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        <span class="selector-tag">p</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">          <span class="attribute">color</span>: blue;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        <span class="selector-tag">div</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">          <span class="attribute">background</span>: red;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        <span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">600px</span>) &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">          <span class="selector-tag">div</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">            <span class="attribute">background</span>: blue;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">          &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">      `&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">style</span> <span class="attr">global</span> <span class="attr">jsx</span>&gt;</span><span class="language-css">&#123;`</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        <span class="selector-tag">body</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">          <span class="attribute">background</span>: black;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">      `&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">HelloWorld</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><h3 id="模块懒加载"><a href="#模块懒加载" class="headerlink" title="模块懒加载"></a>模块懒加载</h3><p>第一步，先选择一个需要懒加载的插件，我们拿moment做例子。先安装它：</p>
+<p>npm install moment -s</p>
+<p>第二步，在页面里，用moment写一个例子</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Task</span> = (<span class="params">&#123; time &#125;</span>) =&gt; (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>time：&#123;time&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="title class_">Task</span>.<span class="property">getInitialProps</span> = <span class="keyword">async</span> (ctx) =&gt;&#123;</span><br><span class="line">    <span class="keyword">const</span> moment = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;moment&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123; </span><br><span class="line">    	<span class="attr">time</span>: moment.<span class="title function_">default</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>() - <span class="number">60</span>*<span class="number">1000</span>).<span class="title function_">fromNow</span>()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">withRouter</span>(<span class="title class_">Task</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第三步，重启，运行，在network里会发现moment的代码被新打包成了一个1.js加载出来</p>
+<h3 id="组件懒加载"><a href="#组件懒加载" class="headerlink" title="组件懒加载"></a>组件懒加载</h3><p>第一步，先新建一个组件</p>
+<p>task.list.jsx</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">TaskList</span> = (<span class="params"></span>)=&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这里是任务列表<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">TaskList</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二步，再在页面内引入</p>
+<p>task.js</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dynamic <span class="keyword">from</span> <span class="string">&#x27;next/dynamic&#x27;</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">TaskList</span> = <span class="title function_">dynamic</span>(<span class="keyword">import</span>(<span class="string">&#x27;../components/pages/task/task.list&#x27;</span>))</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Task</span> = (<span class="params"></span>)=&gt;&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">TaskList</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">TaskList</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第三步，重启，运行。在network里会发现task.list.js被新打包了一个js加载出来</p>
+<h2 id="自定义Header"><a href="#自定义Header" class="headerlink" title="自定义Header"></a>自定义Header</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Head</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">title</span>&gt;</span>技术胖是最胖的！<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charSet</span>=<span class="string">&#x27;utf-8&#x27;</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Head</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="在Next-js框架下使用AntDesineUI"><a href="#在Next-js框架下使用AntDesineUI" class="headerlink" title="在Next.js框架下使用AntDesineUI"></a>在Next.js框架下使用AntDesineUI</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Next-js/" rel="tag"><i class="fa fa-google"></i> Next-js</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/" rel="next" title="硅谷直聘项目介绍">
+                <i class="fa fa-chevron-left"></i> 硅谷直聘项目介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/%E5%A4%A7%E8%80%81%E5%B8%883.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/askjdb" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://portrait.gitee.com/ausbdbdh" target="_blank" title="Gitee">
+                      
+                        <i class="fa fa-fw fa-Gridea"></i>Gitee</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://user.qzone.qq.com/3137656758" title="QQZone" target="_blank">QQZone</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Next-js%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">Next.js简单使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BANext-js%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.</span> <span class="nav-text">创建Next.js项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BANext-js%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.1.</span> <span class="nav-text">手动创建Next.js项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#creact-next-app%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.2.</span> <span class="nav-text">creact-next-app快速创建项目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pages"><span class="nav-number">1.3.</span> <span class="nav-text">Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1"><span class="nav-number">1.4.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Link"><span class="nav-number">1.4.1.</span> <span class="nav-text">Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Router"><span class="nav-number">1.4.2.</span> <span class="nav-text">Router</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E6%8E%A5%E6%94%B6"><span class="nav-number">1.4.3.</span> <span class="nav-text">参数传递与接收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-number">1.4.4.</span> <span class="nav-text">动态路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%92%A9%E5%AD%90%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.4.5.</span> <span class="nav-text">钩子事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.5.</span> <span class="nav-text">获取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getStaticProps"><span class="nav-number">1.5.1.</span> <span class="nav-text">getStaticProps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getServerSideProps"><span class="nav-number">1.5.2.</span> <span class="nav-text">getServerSideProps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getInitialProps"><span class="nav-number">1.5.3.</span> <span class="nav-text">getInitialProps</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E6%94%AF%E6%8C%81%EF%BC%88%E7%8E%B0%E5%9C%A8%E7%9A%84Next-js%E6%94%AF%E6%8C%81%E7%9B%B4%E6%8E%A5import%E5%BC%95%E5%85%A5css%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">CSS支持（现在的Next.js支持直接import引入css）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80css"><span class="nav-number">1.6.1.</span> <span class="nav-text">添加全局css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6%E7%BA%A7CSS"><span class="nav-number">1.6.2.</span> <span class="nav-text">添加组件级CSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.7.</span> <span class="nav-text">懒加载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.7.1.</span> <span class="nav-text">模块懒加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">1.7.2.</span> <span class="nav-text">组件懒加载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89Header"><span class="nav-number">1.8.</span> <span class="nav-text">自定义Header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8Next-js%E6%A1%86%E6%9E%B6%E4%B8%8B%E4%BD%BF%E7%94%A8AntDesineUI"><span class="nav-number">1.9.</span> <span class="nav-text">在Next.js框架下使用AntDesineUI</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">风起苍岚</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访问数<i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量<i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'QtbB0lOFFLNfpJjHqgDyWTUR-gzGzoHsz',
+        appKey: 'MOxzVQcSKiJap2B9yf3EdUqQ',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
