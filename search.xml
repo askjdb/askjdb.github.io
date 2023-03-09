@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>硅谷直聘项目介绍</title>
-    <url>/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/</url>
-    <content><![CDATA[<h1 id="硅谷直聘项目"><a href="#硅谷直聘项目" class="headerlink" title="硅谷直聘项目"></a>硅谷直聘项目</h1><h2 id="1-1-项目描述"><a href="#1-1-项目描述" class="headerlink" title="1.1. 项目描述"></a><strong>1.1.</strong> <strong>项目描述</strong></h2><ul>
-<li><p>此项目为一个前后台分离的招聘的 SPA, 包括前端应用和后端应用</p>
-</li>
-<li><p>包括用户注册&#x2F;登陆, 大神&#x2F;老板列表, 实时聊天等模块</p>
-</li>
-<li><p>前端: 使用 React 全家桶+ES6+Webpack 等技术</p>
-</li>
-<li><p>后端: 使用 Node + express + mongodb + socketIO 等技术</p>
-</li>
-<li><p>采用模块化、组件化、工程化的模式开发</p>
-</li>
-</ul>
-<h2 id="1-2-项目功能界面"><a href="#1-2-项目功能界面" class="headerlink" title="1.2. 项目功能界面"></a><strong>1.2.</strong> <strong>项目功能界面</strong></h2><h3 id="大神主界面"><a href="#大神主界面" class="headerlink" title="大神主界面"></a>大神主界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="大神主界面.jpg"></p>
-<h3 id="大神消息列表"><a href="#大神消息列表" class="headerlink" title="大神消息列表"></a>大神消息列表</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E6%B6%88%E6%81%AF%E5%88%97%E8%A1%A8.png" alt="大神消息列表"></p>
-<h3 id="大神个人中心"><a href="#大神个人中心" class="headerlink" title="大神个人中心"></a>大神个人中心</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%B8%AA%E4%BA%BA%E9%A1%B5%E9%9D%A2.png" alt="大神个人页面"></p>
-<h3 id="老板主界面"><a href="#老板主界面" class="headerlink" title="老板主界面"></a>老板主界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E9%A1%B5%E9%9D%A2.png" alt="老板页面"></p>
-<h3 id="老板-消息列表"><a href="#老板-消息列表" class="headerlink" title="老板 消息列表"></a>老板 消息列表</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E6%B6%88%E6%81%AF%E5%88%97%E8%A1%A8.png" alt="老板消息列表"></p>
-<h3 id="老板-个人中心"><a href="#老板-个人中心" class="headerlink" title="老板 个人中心"></a>老板 个人中心</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83.png" alt="老板用户中心"></p>
-<h3 id="聊天界面"><a href="#聊天界面" class="headerlink" title="聊天界面"></a>聊天界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%81%8A%E5%A4%A9%E9%A1%B5%E9%9D%A2.png" alt="聊天页面"></p>
-<h3 id="登陆界面"><a href="#登陆界面" class="headerlink" title="登陆界面"></a>登陆界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" alt="登录页面"></p>
-<h3 id="注册界面"><a href="#注册界面" class="headerlink" title="注册界面"></a>注册界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.png" alt="注册页面"></p>
-<h3 id="老板信息完善界面"><a href="#老板信息完善界面" class="headerlink" title="老板信息完善界面"></a>老板信息完善界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E4%BF%A1%E6%81%AF%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2.png" alt="老板信息完善页面"></p>
-<h3 id="大神信息完善界面"><a href="#大神信息完善界面" class="headerlink" title="大神信息完善界面"></a>大神信息完善界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%BF%A1%E6%81%AF%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2.png" alt="大神信息完善页面"></p>
-<h2 id="1-3技术选型"><a href="#1-3技术选型" class="headerlink" title="1.3技术选型"></a>1.3技术选型</h2><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.png" alt="image-20230308202839516"></p>
-<h2 id="1-4-前端路由"><a href="#1-4-前端路由" class="headerlink" title="1.4. 前端路由"></a><strong>1.4.</strong> <strong>前端路由</strong></h2><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1.png" alt="image-20230308203103893"></p>
-]]></content>
-      <tags>
-        <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Next.js使用</title>
     <url>/2023/03/08/Next-js%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Next-js简单使用教程"><a href="#Next-js简单使用教程" class="headerlink" title="Next.js简单使用教程"></a>Next.js简单使用教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
@@ -228,6 +195,104 @@
 <h2 id="在Next-js框架下使用AntDesineUI"><a href="#在Next-js框架下使用AntDesineUI" class="headerlink" title="在Next.js框架下使用AntDesineUI"></a>在Next.js框架下使用AntDesineUI</h2>]]></content>
       <tags>
         <tag>Next-js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组去重总结</title>
+    <url>/2023/03/09/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//样例数组</span><br><span class="line">const arr = [1, 2, 2, &#x27;abc&#x27;, &#x27;abc&#x27;, true, true, false, false, undefined, undefined, NaN, NaN]</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-利用Set-Array-from"><a href="#1-利用Set-Array-from" class="headerlink" title="1.利用Set()+Array.from()"></a>1.利用Set()+Array.from()</h3><ul>
+<li><code>Set</code>对象：是<strong>值的集合</strong>，你可以按照插入的顺序<strong>迭代</strong>它的元素。 Set中的元素只会<strong>出现一次</strong>，即Set中的<strong>元素是唯一的</strong>。</li>
+<li><code>Array.from()</code> 方法：对一个<strong>类似数组</strong>或<strong>可迭代对象</strong>创建一个新的，浅拷贝的数组实例。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> result = <span class="title class_">Array</span>.<span class="title function_">from</span>(<span class="keyword">new</span> <span class="title class_">Set</span>(arr))</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN ]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：以上去方式对<code>NaN</code>和<code>undefined</code>类型去重也是有效的，是因为<code>NaN</code>和<code>undefined</code>都可以被存储在Set中， <code>NaN</code>之间被视为相同的值（尽管在js中：<code>NaN !== NaN</code>）。</p>
+<h3 id="2-利用两层循环-数组的splice方法"><a href="#2-利用两层循环-数组的splice方法" class="headerlink" title="2.利用两层循环+数组的splice方法"></a>2.利用两层循环+数组的splice方法</h3><blockquote>
+<p>通过两层循环对数组元素进行逐一比较，然后通过splice方法来删除重复的元素。此方法对NaN是无法进行去重的，因为进行比较时<code>NaN !== NaN</code>。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] === arr[j]) &#123;</span><br><span class="line">        arr.<span class="title function_">splice</span>(j, <span class="number">1</span>)</span><br><span class="line">        len-- <span class="comment">// 减少循环次数提高性能</span></span><br><span class="line">        j-- <span class="comment">// 保证j的值自加后不变</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN, NaN ]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-利用数组的indexOf方法"><a href="#3-利用数组的indexOf方法" class="headerlink" title="3.利用数组的indexOf方法"></a>3.利用数组的indexOf方法</h3><blockquote>
+<p>新建一个空数组，遍历需要去重的数组，将数组元素存入新数组中，存放前判断数组中是否已经含有当前元素，没有则存入。此方法也无法对<code>NaN</code>去重。</p>
+</blockquote>
+<ul>
+<li><code>indexOf()</code> 方法：返回调用它的String对象中第一次出现的指定值的索引，从 <code>fromIndex</code> 处进行搜索。如果未找到该值，则返回 -1。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> newArr = []</span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (newArr.<span class="title function_">indexOf</span>(item) === -<span class="number">1</span>) &#123;</span><br><span class="line">      newArr.<span class="title function_">push</span>(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> newArr <span class="comment">// 返回一个新数组</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN, NaN ]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-利用数组的includes方法"><a href="#4-利用数组的includes方法" class="headerlink" title="4.利用数组的includes方法"></a>4.利用数组的includes方法</h3><blockquote>
+<p>此方法逻辑与indexOf方法去重异曲同工，只是用includes方法来判断是否包含重复元素。</p>
+</blockquote>
+<ul>
+<li><code>includes()</code>方法：用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 <code>true</code>，否则返回 <code>false</code>。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> newArr = []</span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!newArr.<span class="title function_">includes</span>(item)) &#123;</span><br><span class="line">      newArr.<span class="title function_">push</span>(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> newArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN ]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：为什么<code>includes</code>能够检测到数组中包含<code>NaN</code>，其涉及到<code>includes</code>底层的实现。如下图为<code>includes</code>实现的部分代码，在进行判断是否包含某元素时会调用<code>sameValueZero方法</code>进行比较，如果为<code>NaN</code>，则会使用<code>isNaN()</code>进行转化。</p>
+<p>简单测试<code>includes()</code>对<code>NaN</code>的判断：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> testArr = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="title class_">NaN</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(testArr.<span class="title function_">includes</span>(<span class="title class_">NaN</span>)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-利用数组的filter-indexOf"><a href="#5-利用数组的filter-indexOf" class="headerlink" title="5.利用数组的filter()+indexOf()"></a>5.利用数组的filter()+indexOf()</h3><blockquote>
+<p>filter方法会对满足条件的元素存放到一个新数组中，结合indexOf方法进行判断。</p>
+</blockquote>
+<ul>
+<li><code>filter()</code> 方法：会创建一个新数组，其包含<strong>通过所提供函数实现的测试</strong>的所有元素。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">indexOf</span>(item) === index</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined ]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的输出结果中不包含<code>NaN</code>，是因为<code>indexOf()</code>无法对NaN进行判断，即<code>arr.indexOf(item) === index</code>返回结果为false。测试如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> testArr = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="title class_">NaN</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(testArr.<span class="title function_">indexOf</span>(<span class="title class_">NaN</span>)) <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-利用Map"><a href="#6-利用Map" class="headerlink" title="6.利用Map()"></a>6.利用Map()</h3><blockquote>
+<p>Map对象是JavaScript提供的一种数据结构，结构为键值对形式，将数组元素作为map的键存入，然后结合<code>has()</code>和<code>set()</code>方法判断键是否重复。</p>
+</blockquote>
+<ul>
+<li><code>Map</code> 对象：用于保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始值）都可以作为一个键或一个值。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">  <span class="keyword">const</span> newArr = []</span><br><span class="line"></span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!map.<span class="title function_">has</span>(item)) &#123; <span class="comment">// has()用于判断map是否包为item的属性值</span></span><br><span class="line">      map.<span class="title function_">set</span>(item, <span class="literal">true</span>) <span class="comment">// 使用set()将item设置到map中，并设置其属性值为true</span></span><br><span class="line">      newArr.<span class="title function_">push</span>(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> newArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN ]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：使用<code>Map()</code>也可对<code>NaN</code>去重，原因是Map进行判断时认为<code>NaN</code>是与<code>NaN</code>相等的，剩下所有其它的值是根据 <code>===</code> 运算符的结果判断是否相等。</p>
+<h3 id="7-利用对象"><a href="#7-利用对象" class="headerlink" title="7.利用对象"></a>7.利用对象</h3><blockquote>
+<p>其实现思想和<code>Map()</code>是差不多的，主要是利用了对象的属性名不可重复这一特性。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">removeDuplicate</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> newArr = []</span><br><span class="line">  <span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!obj[item]) &#123;</span><br><span class="line">      newArr.<span class="title function_">push</span>(item)</span><br><span class="line">      obj[item] = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> newArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">removeDuplicate</span>(arr)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result) <span class="comment">// [ 1, 2, &#x27;abc&#x27;, true, false, undefined, NaN ]</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端手写题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>硅谷直聘项目介绍</title>
+    <url>/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/</url>
+    <content><![CDATA[<h1 id="硅谷直聘项目"><a href="#硅谷直聘项目" class="headerlink" title="硅谷直聘项目"></a>硅谷直聘项目</h1><h2 id="1-1-项目描述"><a href="#1-1-项目描述" class="headerlink" title="1.1. 项目描述"></a><strong>1.1.</strong> <strong>项目描述</strong></h2><ul>
+<li><p>此项目为一个前后台分离的招聘的 SPA, 包括前端应用和后端应用</p>
+</li>
+<li><p>包括用户注册&#x2F;登陆, 大神&#x2F;老板列表, 实时聊天等模块</p>
+</li>
+<li><p>前端: 使用 React 全家桶+ES6+Webpack 等技术</p>
+</li>
+<li><p>后端: 使用 Node + express + mongodb + socketIO 等技术</p>
+</li>
+<li><p>采用模块化、组件化、工程化的模式开发</p>
+</li>
+</ul>
+<h2 id="1-2-项目功能界面"><a href="#1-2-项目功能界面" class="headerlink" title="1.2. 项目功能界面"></a><strong>1.2.</strong> <strong>项目功能界面</strong></h2><h3 id="大神主界面"><a href="#大神主界面" class="headerlink" title="大神主界面"></a>大神主界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="大神主界面.jpg"></p>
+<h3 id="大神消息列表"><a href="#大神消息列表" class="headerlink" title="大神消息列表"></a>大神消息列表</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E6%B6%88%E6%81%AF%E5%88%97%E8%A1%A8.png" alt="大神消息列表"></p>
+<h3 id="大神个人中心"><a href="#大神个人中心" class="headerlink" title="大神个人中心"></a>大神个人中心</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%B8%AA%E4%BA%BA%E9%A1%B5%E9%9D%A2.png" alt="大神个人页面"></p>
+<h3 id="老板主界面"><a href="#老板主界面" class="headerlink" title="老板主界面"></a>老板主界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E9%A1%B5%E9%9D%A2.png" alt="老板页面"></p>
+<h3 id="老板-消息列表"><a href="#老板-消息列表" class="headerlink" title="老板 消息列表"></a>老板 消息列表</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E6%B6%88%E6%81%AF%E5%88%97%E8%A1%A8.png" alt="老板消息列表"></p>
+<h3 id="老板-个人中心"><a href="#老板-个人中心" class="headerlink" title="老板 个人中心"></a>老板 个人中心</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83.png" alt="老板用户中心"></p>
+<h3 id="聊天界面"><a href="#聊天界面" class="headerlink" title="聊天界面"></a>聊天界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%81%8A%E5%A4%A9%E9%A1%B5%E9%9D%A2.png" alt="聊天页面"></p>
+<h3 id="登陆界面"><a href="#登陆界面" class="headerlink" title="登陆界面"></a>登陆界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" alt="登录页面"></p>
+<h3 id="注册界面"><a href="#注册界面" class="headerlink" title="注册界面"></a>注册界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.png" alt="注册页面"></p>
+<h3 id="老板信息完善界面"><a href="#老板信息完善界面" class="headerlink" title="老板信息完善界面"></a>老板信息完善界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E8%80%81%E6%9D%BF%E4%BF%A1%E6%81%AF%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2.png" alt="老板信息完善页面"></p>
+<h3 id="大神信息完善界面"><a href="#大神信息完善界面" class="headerlink" title="大神信息完善界面"></a>大神信息完善界面</h3><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%A4%A7%E7%A5%9E%E4%BF%A1%E6%81%AF%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2.png" alt="大神信息完善页面"></p>
+<h2 id="1-3技术选型"><a href="#1-3技术选型" class="headerlink" title="1.3技术选型"></a>1.3技术选型</h2><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.png" alt="image-20230308202839516"></p>
+<h2 id="1-4-前端路由"><a href="#1-4-前端路由" class="headerlink" title="1.4. 前端路由"></a><strong>1.4.</strong> <strong>前端路由</strong></h2><p><img src="/2023/03/08/%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1.png" alt="image-20230308203103893"></p>
+]]></content>
+      <tags>
+        <tag>项目</tag>
       </tags>
   </entry>
 </search>
